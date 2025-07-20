@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* --- CSS 變數定義 --- */
     :root {
       --primary-color: #0056b3;
       --secondary-color: #007bff;
@@ -26,30 +25,26 @@
       --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    /* --- 全域樣式重設與基礎設定 --- */
     *, *::before, *::after { 
       box-sizing: border-box; 
     }
-
-    html {
-      /* 新增：點擊錨點時平滑滾動 */
-      scroll-behavior: smooth;
-    }
+    
+    /* 移除 html 的 scroll-behavior，因為我們將用 JS 控制 */
+    html { }
 
     body { 
       margin: 0; 
       background: var(--bg-light); 
       font-family: var(--font-body); 
       color: var(--text-color); 
-      line-height: 1.7; /* 優化：增加預設行高以提升閱讀性 */
+      line-height: 1.7;
     }
 
-    /* --- 頁首 Header --- */
     header { 
       background: var(--primary-color); 
       color: white; 
       text-align: center; 
-      padding: 1.5rem 1.5rem; /* 優化：增加左右 padding */
+      padding: 1.5rem 1.5rem;
     }
 
     header h1 { 
@@ -59,23 +54,21 @@
       font-weight: 700;
     }
 
-    /* --- 主要容器 Container --- */
     .container { 
       display: flex; 
       max-width: 1200px; 
-      margin: 2rem auto; /* 優化：增加上下 margin */
+      margin: 2rem auto;
       background: white; 
-      border-radius: 12px; /* 優化：增加圓角 */
+      border-radius: 12px;
       overflow: hidden; 
       box-shadow: var(--shadow-md); 
     }
 
-    /* --- 側邊導覽列 Sidebar --- */
     nav#sidebar { 
-      width: 240px; /* 優化：稍微加寬 */
+      width: 240px;
       background: #e9ecef; 
       padding: 1.5rem; 
-      border-right: 1px solid var(--border-color); /* 優化：增加分隔線 */
+      border-right: 1px solid var(--border-color);
     }
 
     nav#sidebar h2 { 
@@ -99,29 +92,29 @@
 
     .founder-link { 
       display: block; 
-      padding: 0.75rem 1rem; /* 優化：增加 padding */
+      padding: 0.75rem 1rem;
       background: var(--secondary-color); 
       color: white; 
       text-decoration: none; 
-      border-radius: 6px; /* 優化：增加圓角 */
-      transition: background 0.2s ease-in-out, transform 0.2s ease-in-out; /* 優化：增加 transform 動畫 */
+      border-radius: 6px;
+      transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
       font-weight: 500;
+      cursor: pointer; /* 讓滑鼠顯示為可點擊 */
     }
 
     .founder-link:hover { 
       background: var(--accent-color); 
-      transform: translateY(-2px); /* 優化：增加懸浮效果 */
+      transform: translateY(-2px);
     }
 
     .founder-link.active {
       background: var(--accent-color);
-      box-shadow: 0 0 10px rgba(40, 167, 69, 0.5); /* 優化：使用中連結更突出 */
+      box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
     }
 
-    /* --- 主要內容區 Main Content --- */
     main#main-content { 
       flex: 1; 
-      padding: 2.5rem; /* 優化：增加內部空間 */
+      padding: 2.5rem;
     }
 
     section { 
@@ -130,7 +123,7 @@
 
     section.active { 
       display: block; 
-      /* 優化：新增淡入動畫效果 */
+      /* 動畫效果的 CSS 保持不變 */
       animation: fadeIn 0.5s ease-in-out;
     }
 
@@ -142,7 +135,7 @@
     section h2 { 
       font-family: var(--font-heading); 
       color: var(--primary-color); 
-      font-size: 1.8rem; /* 優化：加大主標題 */
+      font-size: 1.8rem;
       margin-top: 0;
       margin-bottom: 0.5rem;
       font-weight: 700;
@@ -157,18 +150,16 @@
     }
 
     section p { 
-      margin: 1rem 0; /* 優化：統一 p 的 margin */
+      margin: 1rem 0;
       text-align: justify;
       color: var(--text-light);
     }
     
-    /* 優化：讓隸屬資訊更突出 */
     section p strong {
       color: var(--text-color);
       font-weight: 500;
     }
     
-    /* 優化：外部連結樣式 */
     section a {
       color: var(--secondary-color);
       font-weight: 500;
@@ -183,7 +174,7 @@
 
     .founder-image { 
       display: block; 
-      max-width: 250px; /* 優化：稍微縮小圖片 */
+      max-width: 250px;
       width: 100%; 
       margin: 1.5rem auto; 
       border-radius: 8px; 
@@ -193,9 +184,9 @@
     .video-container { 
       position: relative; 
       width: 100%; 
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 56.25%;
       margin: 2rem 0; 
-      border-radius: 12px; /* 優化：增加圓角 */
+      border-radius: 12px;
       overflow: hidden; 
       box-shadow: var(--shadow-sm);
     }
@@ -209,7 +200,6 @@
       border: 0; 
     }
 
-    /* --- 頁尾 Footer --- */
     footer { 
       text-align: center; 
       padding: 1.5rem; 
@@ -219,193 +209,32 @@
       background: #e9ecef;
     }
 
-    /* --- 響應式設計 (RWD for Mobile) --- */
     @media (max-width: 768px) {
       body {
-        line-height: 1.65; /* 優化：手機版行高微調 */
+        line-height: 1.65;
       }
-
       .container { 
         flex-direction: column; 
-        margin: 0; /* 優化：手機版滿版顯示 */
+        margin: 0;
         border-radius: 0;
       }
-
       nav#sidebar { 
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid var(--border-color); /* 優化：分隔線改至下方 */
+        border-bottom: 1px solid var(--border-color);
       }
-      
       header h1 { 
         font-size: 1.5rem; 
       }
-      
       main#main-content { 
-        padding: 1.5rem; /* 優化：手機版內距調整 */
+        padding: 1.5rem;
       }
-
       section h2 {
         font-size: 1.6rem;
       }
-
       section h3 {
         font-size: 1.2rem;
       }
     }
   </style>
 </head>
-<body>
-  <div id="content-top"></div>
-  <header>
-    <h1>致「宇宙數位文化典藏協會」（UCHA）共同發起人的致詞</h1>
-  </header>
-  
-  <div class="container">
-    <nav id="sidebar">
-      <h2>共同發起人</h2>
-      <ul>
-        <li><a href="#content-top" class="founder-link" data-id="about-ucha">關於 UCHA</a></li>
-        <li><a href="#content-top" class="founder-link" data-id="jerry-lee">李俊煌 (Jerry Lee)</a></li>
-        <li><a href="#content-top" class="founder-link" data-id="tain-jue">天爵 (Tain Jue)</a></li>
-        <li><a href="#content-top" class="founder-link" data-id="lancelot-khan">甘詔允 (Lancelot Khan)</a></li>
-        <li><a href="#content-top" class="founder-link" data-id="chen-anpang">陳安邦 (Chen Anpang)</a></li>
-        <li><a href="#content-top" class="founder-link" data-id="james-lin">林志贏 (James Lin)</a></li>
-        <li><a href="#content-top" class="founder-link" data-id="diana-chen">陳惠湘 (Diana Chen)</a></li>
-        <li><a href="#content-top" class="founder-link" data-id="candy">楊姐 (Candy)</a></li>
-        <li><a href="#content-top" class="founder-link" data-id="michael-luo">羅濟森 (Michael Luo)</a></li>
-        <li><a href="#content-top" class="founder-link" data-id="vic-liu">劉志勝 (Vic Liu)</a></li>
-      </ul>
-    </nav>
-    <main id="main-content">
-      <section id="about-ucha">
-        <h2>宇宙數位文化典藏協會 (UCHA)</h2>
-        <h3>同心同行，放眼宇宙——讓不可能成為可能</h3>
-        <p><strong>作者｜李俊煌（Jerry Lee）｜NFTsVERSE ART 創辦人、UCHA首任理事長</strong></p>
-        <p>許多人或會質疑：我們的願景宛如天方夜譚。</p>
-        <p>把《愛拚才會贏NFT》送上火星？還要在此之前，巡迴全球展覽？</p>
-        <p>匯聚全世界對「宇宙文化藝術遷徙」的認同與支持？這可能嗎？</p>
-        <p>然而，正是這份看似不可能的雄心，凝聚了我們九位創始人——林志贏（JamesLin）、劉志勝（VicLiu）、羅濟森（MichaelLuo）、甘詔允（LancelotKhan）、天爵（TainJue）、陳安邦（ChenAnPang）、陳惠湘（DianaChen）、楊姐（Candy），與我李俊煌（JerryLee）——共同的信念與力量。</p>
-        <p>我們組成了UCHA（宇宙數位文化典藏協會），作為一個民間公益組織，將以Web3區塊鏈為橋，詳實記錄並永久上鏈：《愛拚才會贏NFT》2022年1月，全球首次上鏈發表會所創下的歷史性成功。</p>
-        <p>這不是幻想，這是從想像走向實現的關鍵起點。這是台灣文化科技，首次在世界舞台上大聲說話。</p>
-        <p>接下來，NFTsVERSE ART 團隊將特別鑄造「火星遷徙版《愛拚才會贏NFT》」，並授權協會正式捐贈予太空任務執行單位，作為人類文化記憶的一部分。</p>
-        <p>在發射前夕，我們將舉辦系列全球公益展覽，串聯藝術與科技、島嶼與星球，並發行文化衍生周邊，用具體行動向全世界宣告：<br>文化無界、藝術無疆！</p>
-        <p>這不只是展示——這是一次跨越大氣層、挑戰時間與空間的壯闊旅程。</p>
-        <p>正如 Elon Musk 所言：<br>「火星，是新天地的領土。」</p>
-        <p>我們以此宣言，作為勇氣的注腳。因為我們堅信——這首被全球逾15億人次傳唱的台語金曲《愛拚才會贏》，所承載的不屈不撓與奮鬥精神，必能跨越語言、文化與星際的隔閡！</p>
-        <p>它不是高不可攀的藝術品。它來自庶民，卻撼動了全球。這首俗中之王，用最接地氣的旋律，影響了領袖，也感動了百姓。迄今，已被翻唱超過40個國家、15種語言版本，它的傳播力，就是我們的根基。</p>
-        <p>未來，我們九位創始人，將共同肩負這項使命。請各位發起人，繼續代表協會在國際舞台與星際文化交流中發聲，讓來自台灣的創作藝術與公益精神，透過Web3技術化為永恆的文化豐碑，陪伴人類，共同邁向那無垠宇宙。</p>
-        <p>你若願拚，我們陪你拚到宇宙盡頭。</p>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="UCHA 宣言影片" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </section>
-      <section id="jerry-lee">
-        <h2>李俊煌 (Jerry Lee)</h2>
-        <img src="https://raw.githubusercontent.com/jerrylee0217520/foundersData/main/docs/jerry-lee.webp" alt="李俊煌" class="founder-image">
-        <p><strong>隸屬：</strong>BRAND TAIWAN INTERNATIONAL LTD, NFTsVERSE ART 創辦人</p>
-        <p>
-          <strong>專欄：</strong>
-          <a href="https://vocus.cc/salon/jerrylee" target="_blank" rel="noopener noreferrer">
-            從內容出發：神奇杰瑞的新媒體與品牌實戰筆記
-          </a>
-        </p>
-        <p>身為UCHA首任理事長，Jerry Lee以深厚的品牌行銷與Web3經驗，持續推動協會各項跨星文化計畫。</p>
-      </section>
-      <section id="tain-jue">
-        <h2>天爵 (Tain Jue)</h2>
-        <img src="https://raw.githubusercontent.com/jerrylee0217520/foundersData/main/docs/tain-jue.webp" alt="天爵" class="founder-image">
-        <p><strong>隸屬：</strong>「宇宙數位文化典藏協會」（UCHA）共同發起人</p>
-        <p>天爵兄弟，三年前初識至今，您與我並肩砥礪，見證彼此的成長與突破。您在品牌行銷與跨界策展的深厚造詣，多次為「傳世國寶系列NFT」注入卓越能量。如今有您作為發起人之一，擔當人類面向宇宙的文化大使，實為協會之幸。</p>
-      </section>
-      <section id="lancelot-khan">
-        <h2>甘詔允 (Lancelot Khan)</h2>
-        <img src="https://raw.githubusercontent.com/jerrylee0217520/foundersData/main/docs/lancelot-khan.webp" alt="甘詔允" class="founder-image">
-        <p><strong>隸屬：</strong>「宇宙數位文化典藏協會」（UCHA）共同發起人</p>
-        <p>詔允兄，相識逾三載，您以國際視野與創新思維為團隊帶來無價助力。對品牌與文化的敏銳洞察，啟發我們向更寬廣的星際文化交流邁進。未來，期待您的遠見繼續引領UCHA拓展疆界。</p>
-      </section>
-      <section id="chen-anpang">
-        <h2>陳安邦 (Chen Anpang)</h2>
-        <img src="https://raw.githubusercontent.com/jerrylee0217520/foundersData/main/docs/chen-anpang.webp" alt="陳安邦" class="founder-image">
-        <p><strong>隸屬：</strong>「宇宙數位文化典藏協會」（UCHA）共同發起人</p>
-        <p>邦哥，二年多來共事結緣，您在企業經營與社會責任方面的卓越表現，為協會打造了穩固的人資與安全維護基礎。未來，請您持續以務實果敢的態度，為國際推廣展覽與跨星宣導保駕護航。</p>
-      </section>
-      <section id="james-lin">
-        <h2>林志贏 (James Lin)</h2>
-        <img src="https://raw.githubusercontent.com/jerrylee0217520/foundersData/main/docs/james-lin.webp" alt="林志贏" class="founder-image">
-        <p><strong>隸屬：</strong>「宇宙數位文化典藏協會」（UCHA）共同發起人</p>
-        <p>志贏兄弟，雖僅相識十餘年，您在連鎖產業新媒體與影音策展領域展現的創意能量，為我們的宣傳注入無限活力。盼未來您以創新手法，讓華人文化在Web3宇宙中綻放更加耀眼的光芒。</p>
-      </section>
-      <section id="diana-chen">
-        <h2>陳惠湘 (Diana Chen)</h2>
-        <img src="https://raw.githubusercontent.com/jerrylee0217520/foundersData/main/docs/diana-chen.webp" alt="陳惠湘" class="founder-image">
-        <p><strong>隸屬：</strong>「宇宙數位文化典藏協會」（UCHA）共同發起人</p>
-        <p>惠湘姐，七年來您在公關與媒體操作上的精准手腕，為專案爭取了關鍵曝光。對「愛拚才會贏NFT」的鼎力支持與資源連結，印證了您以溫暖與專業串聯各界的力量。今天，請您化身我們的「宇宙文化大使」，在國際舞台與媒體前，持續弘揚華人文藝精神</p>
-      </section>
-      <section id="candy">
-        <h2>楊姐 (Candy)</h2>
-        <img src="https://raw.githubusercontent.com/jerrylee0217520/foundersData/main/docs/candy.webp" alt="楊姐" class="founder-image">
-        <p><strong>隸屬：</strong>「宇宙數位文化典藏協會」（UCHA）共同發起人</p>
-        <p>楊姊三年前透過江哥認識結下善緣，您在社會關懷與公益領域的熱忱付出，為UCHA與全球受眾搭建起關愛的橋樑。期盼您以愛心與影響力，將協會理念廣布世界每個角落</p>
-      </section>
-      <section id="michael-luo">
-        <h2>羅濟森 (Michael Luo)</h2>
-        <img src="https://raw.githubusercontent.com/jerrylee0217520/foundersData/main/docs/michael-luo.webp" alt="羅濟森" class="founder-image">
-        <p><strong>隸屬：</strong>「宇宙數位文化典藏協會」（UCHA）共同發起人, NFTsVERSE ART 技術發起人</p>
-        <p>阿森老師，五年多來，您在科技與藝術跨界研發的前瞻見解，為「KANDER’SCHINAROYALART國寶NFT」注入創新生命。未來，還請您將此洞察帶入協會制度設計與跨星應用，讓文化作品在元資料中綻放萬丈光芒</p>
-      </section>
-      <section id="vic-liu">
-        <h2>劉志勝 (Vic Liu)</h2>
-        <img src="https://raw.githubusercontent.com/jerrylee0217520/foundersData/main/docs/vic-liu.webp" alt="劉志勝" class="founder-image">
-        <p><strong>隸屬：</strong>「宇宙數位文化典藏協會」（UCHA）共同發起人</p>
-        <p>寶哥，認識逾三十載，您在品牌行銷與公關議題操作方面的專業，為「愛拚才會贏NFT」發表會提供了堅實支點。在打造「永恆宇宙文化典藏」的路上，期待您以深厚見解，助UCHA穩健成長，邁向國際與星際的新篇章。</p>
-      </section>
-    </main>
-  </div>
-  
-  <footer>
-    © 2025 NFTsVERSE ART 與 宇宙數位文化典藏協會 (UCHA)。保留所有權利。
-  </footer>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('.founder-link');
-      const sections = document.querySelectorAll('main#main-content section');
-      
-      // 預設顯示的區塊 ID
-      const defaultSectionId = 'about-ucha';
-
-      // 函數：根據傳入的 ID 顯示對應的 section
-      function showSection(id) {
-        // 遍歷所有 section，如果 id 相符則加上 'active' class，否則移除
-        sections.forEach(sec => {
-          sec.classList.toggle('active', sec.id === id);
-        });
-        
-        // 遍歷所有導覽連結，如果 data-id 相符則加上 'active' class，否則移除
-        links.forEach(link => {
-          link.classList.toggle('active', link.dataset.id === id);
-        });
-      }
-      
-      // 為每個導覽連結加上點擊事件監聽
-      links.forEach(link => {
-        link.addEventListener('click', e => {
-          // 阻止 a 標籤的默認跳轉行為（雖然我們仍使用 href="#content-top" 來觸發滾動）
-          e.preventDefault(); 
-          
-          // 顯示對應的 section
-          const sectionId = link.dataset.id;
-          showSection(sectionId);
-          
-          // 優化：手動觸發跳轉，確保在所有瀏覽器上行為一致
-          window.location.hash = link.hash;
-        });
-      });
-      
-      // 頁面初次載入時，顯示預設的區塊
-      showSection(defaultSectionId);
-    });
-  </script>
-</body>
-</html>
