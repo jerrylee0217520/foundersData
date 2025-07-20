@@ -1,365 +1,244 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>致「宇宙數位文化典藏協會」（UCHA）共同發起人的致詞</title>
-    <style>
-        /* CSS (樣式表) */
-        :root {
-            --primary-color: #0056b3;
-            --secondary-color: #007bff;
-            --background-light: #f4f7f6;
-            --text-color: #333;
-            --white-color: #fff;
-            --border-color: #dee2e6;
-            --active-color: #28a745;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: var(--background-light);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 20px auto;
-            background-color: var(--white-color);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        header {
-            text-align: center;
-            padding: 30px 20px;
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            margin-bottom: 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        #sidebar {
-            flex: 0 0 250px;
-            background-color: #e9ecef;
-            padding: 20px;
-            border-right: 1px solid var(--border-color);
-            overflow-y: auto;
-        }
-        #sidebar h2 {
-            margin-top: 0;
-            color: var(--primary-color);
-            font-size: 1.3em;
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        #sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        #sidebar li {
-            margin-bottom: 10px;
-        }
-        .founder-link {
-            display: block;
-            padding: 10px 15px;
-            background-color: var(--secondary-color);
-            color: var(--white-color);
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            cursor: pointer;
-            font-size: 1.05em;
-        }
-        .founder-link:hover {
-            background-color: var(--primary-color);
-            transform: translateX(5px);
-        }
-        .founder-link.active {
-            background-color: var(--active-color);
-            font-weight: bold;
-        }
-
-        #main-content {
-            flex: 1;
-            padding: 30px;
-            overflow-y: auto;
-        }
-        #main-content h2 {
-            color: var(--primary-color);
-            font-size: 2em;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-        #main-content h3 {
-            color: var(--secondary-color);
-            font-size: 1.5em;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-        #main-content p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        .founder-image {
-            max-width: 300px;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        #declaration-video {
-            text-align: center;
-            margin-top: 40px;
-        }
-        #declaration-video video {
-            max-width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-        strong {
-            color: var(--primary-color);
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.9em;
-            color: #777;
-            margin-top: 20px;
-        }
-
-        /* 響應式設計 */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            #sidebar {
-                flex: none;
-                width: 100%;
-                border-right: none;
-                border-bottom: 1px solid var(--border-color);
-            }
-            #sidebar nav ul {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            #sidebar nav li {
-                flex: 1 1 auto;
-                min-width: 150px;
-                margin: 5px;
-            }
-            .founder-link {
-                text-align: center;
-            }
-            #main-content {
-                padding: 20px;
-            }
-            header h1 {
-                font-size: 2em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>致「宇宙數位文化典藏協會」（UCHA）共同發起人的致詞</title>
+  <style>
+    :root {
+      --primary-color: #0056b3;
+      --secondary-color: #007bff;
+      --background-light: #f4f7f6;
+      --text-color: #333;
+      --white-color: #fff;
+      --border-color: #dee2e6;
+      --accent-color: #28a745;
+      --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --font-body: 'Noto Sans TC', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--background-light);
+      color: var(--text-color);
+      font-family: var(--font-body);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--primary-color);
+      color: var(--white-color);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+    }
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 1rem auto;
+      background: var(--white-color);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    nav#sidebar {
+      flex: 0 0 220px;
+      background: #e9ecef;
+      padding: 1rem;
+    }
+    nav#sidebar h2 {
+      margin-top: 0;
+      font-family: var(--font-heading);
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    nav#sidebar ul { list-style: none; padding: 0; margin: 0; }
+    nav#sidebar li { margin-bottom: 0.5rem; }
+    .founder-link {
+      display: block;
+      padding: 0.5rem;
+      background: var(--secondary-color);
+      color: var(--white-color);
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      transition: background 0.3s;
+    }
+    .founder-link.active,
+    .founder-link:hover {
+      background: var(--accent-color);
+    }
+    main#main-content {
+      flex: 1;
+      padding: 2rem;
+    }
+    main#main-content h2 {
+      font-family: var(--font-heading);
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+    main#main-content h3 {
+      font-family: var(--font-heading);
+      color: var(--secondary-color);
+      font-size: 1.25rem;
+      margin: 1rem 0 0.5rem;
+    }
+    main#main-content p {
+      margin: 0.75rem 0;
+      text-align: justify;
+    }
+    .founder-image {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      margin: 2rem 0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+    @media (max-width: 768px) {
+      .container { flex-direction: column; margin: 0.5rem; }
+      nav#sidebar { width: 100%; }
+      header h1 { font-size: 1.5rem; }
+      main#main-content { padding: 1rem; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>致「宇宙數位文化典藏協會」（UCHA）共同發起人的致詞</h1>
-    </header>
+  <header>
+    <h1>致「宇宙數位文化典藏協會」（UCHA）共同發起人的致詞</h1>
+  </header>
+  <div class="container">
+    <nav id="sidebar">
+      <h2>共同發起人</h2>
+      <ul>
+        <li><a href="#" class="founder-link active" data-founder-id="about-ucha">關於 UCHA</a></li>
+        <li><a href="#" class="founder-link" data-founder-id="jerry-lee">李俊煌 (Jerry Lee)</a></li>
+        <li><a href="#" class="founder-link" data-founder-id="tain-jue">天爵 (Tain Jue)</a></li>
+        <li><a href="#" class="founder-link" data-founder-id="lancelot-khan">甘詔允 (Lancelot Khan)</a></li>
+        <li><a href="#" class="founder-link" data-founder-id="chen-anpang">陳安邦 (Chen Anpang)</a></li>
+        <li><a href="#" class="founder-link" data-founder-id="james-lin">林志贏 (James Lin)</a></li>
+        <li><a href="#" class="founder-link" data-founder-id="diana-chen">陳惠湘 (Diana Chen)</a></li>
+        <li><a href="#" class="founder-link" data-founder-id="candy">楊姊 (Candy)</a></li>
+        <li><a href="#" class="founder-link" data-founder-id="michael-luo">羅濟森 (Michael Luo)</a></li>
+        <li><a href="#" class="founder-link" data-founder-id="vic-liu">劉志勝 (Vic Liu)</a></li>
+      </ul>
+    </nav>
+    <main id="main-content"></main>
+  </div>
+  <footer>
+    &copy; 2025 NFTsVERSE ART 與 宇宙數位文化典藏協會 (UCHA)。保留所有權利。
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const foundersData = {
+        "about-ucha": {
+          title: "宇宙數位文化典藏協會 (UCHA)",
+          content: `
+            <h3>同心同行，放眼宇宙——讓不可能成為可能</h3>
+            <p><strong>作者｜李俊煌（Jerry Lee）｜NFTsVERSE ART 創辦人、UCHA首任理事長</strong></p>
+            <p>許多人或會質疑：我們的願景宛如天方夜譚。</p>
+            <p>把《愛拚才會贏NFT》送上火星？還要在此之前，巡迴全球展覽？</p>
+            <p>匯聚全世界對「宇宙文化藝術遷徙」的認同與支持？這可能嗎？</p>
+            <p>然而，正是這份看似不可能的雄心，凝聚了我們九位創始人——</p>
+            <p>林志贏（JamesLin）、劉志勝（VicLiu）、羅濟森（MichaelLuo）、甘詔允（LancelotKhan）、</p>
+            <p>天爵（TainJue）、陳安邦（ChenAnPang）、陳惠湘（DianaChen）、楊姊（Candy），與我<br>李俊煌（JerryLee）——共同的信念與力量。</p>
+            <p>我們組成了UCHA（宇宙數位文化典藏協會），作為一個民間公益組織，將以Web3區塊鏈為橋，詳實記錄並永久上鏈：</p>
+            <p>《愛拚才會贏NFT》2022年1月，全球首次上鏈發表會所創下的歷史性成功。</p>
+            <p>這不是幻想，這是從想像走向實現的關鍵起點。這是台灣文化科技，首次在世界舞台上大聲說話。</p>
+            <p>接下來，NFTsVERSE ART 團隊將特別鑄造<br>「火星遷徙版《愛拚才會贏NFT》」，</p>
+            <p>並授權協會正式捐贈予太空任務執行單位，作為人類文化記憶的一部分。</p>
+            <p>在發射前夕，我們將舉辦系列全球公益展覽，串聯藝術與科技、島嶼與星球，並發行文化衍生周邊，</p>
+            <p>用具體行動向全世界宣告：<br>文化無界、藝術無疆！</p>
+            <p>這不只是展示——這是一次跨越大氣層、挑戰時間與空間的壯闊旅程。</p>
+            <p>正如 Elon Musk 所言：<br>「火星，是新天地的領土。」</p>
+            <p>我們以此宣言，作為勇氣的注腳。</p>
+            <p>因為我們堅信——這首被全球逾15億人次傳唱的台語金曲，<br>《愛拚才會贏》，所承載的不屈不撓與奮鬥精神，<br>必能跨越語言、文化與星際的隔閡！</p>
+            <p>它不是高不可攀的藝術品。它來自庶民，卻撼動了全球。</p>
+            <p>這首俗中之王，用最接地氣的旋律，影響了領袖，也感動了百姓。</p>
+            <p>迄今，已被翻唱超過40個國家、15種語言版本，它的傳播力，就是我們的根基。</p>
+            <p>未來，我們九位創始人，將共同肩負這項使命。</p>
+            <p>請各位發起人，繼續代表協會在國際舞台與星際文化交流中發聲，</p>
+            <p>讓來自台灣的創作藝術與公益精神，透過Web3技術化為永恆的文化豐碑，</p>
+            <p>陪伴人類，共同邁向那無垠宇宙。</p>
+            <p>你若願拚，我們陪你拚到宇宙盡頭。</p>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/h-y1uuEqEzw" title="UCHA 協會宣言影片" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          `
+        },
+        "jerry-lee": {
+          name: "李俊煌 (Jerry Lee)",
+          image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/jerry-lee.webp",
+          affiliation: "BRAND TAIWAN INTERNATIONAL LTD, NFTsVERSE ART 創辦人",
+          dedication: ""
+        },
+        "tain-jue": {
+          name: "陳景程 (Tain Jue)",
+          image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/tain-jue.webp",
+          dedication: "..."
+        },
+        // ...其他發起人資料...
+      };
 
-    <div class="container">
-        <aside id="sidebar">
-            <h2>共同發起人</h2>
-            <nav id="founder-nav">
-                <ul>
-                    <li><a href="#" class="founder-link active" data-founder-id="about-ucha">關於 UCHA</a></li>
-                    <li><a href="#" class="founder-link" data-founder-id="jerry-lee">李俊煌 (Jerry Lee)</a></li>
-                    <li><a href="#" class="founder-link" data-founder-id="tain-jue">陳景程 (Tain Jue)</a></li>
-                    <li><a href="#" class="founder-link" data-founder-id="lancelot-khan">甘詔允 (Lancelot Khan)</a></li>
-                    <li><a href="#" class="founder-link" data-founder-id="chen-anpang">陳安邦 (Chen Anpang)</a></li>
-                    <li><a href="#" class="founder-link" data-founder-id="james-lin">林志贏 (James Lin)</a></li>
-                    <li><a href="#" class="founder-link" data-founder-id="diana-chen">陳惠湘 (Diana Chen)</a></li>
-                    <li><a href="#" class="founder-link" data-founder-id="candy">楊姊 (Candy)</a></li>
-                    <li><a href="#" class="founder-link" data-founder-id="michael-luo">羅濟森 (Michael Luo)</a></li>
-                    <li><a href="#" class="founder-link" data-founder-id="vic-liu">劉志勝 (Vic Liu)</a></li>
-                </ul>
-            </nav>
-        </aside>
+      const mainContentDiv = document.getElementById('main-content');
+      const navigation = document.getElementById('sidebar');
+      const founderLinks = navigation.querySelectorAll('.founder-link');
 
-        <main id="main-content">
-            </main>
-    </div>
+      const loadContent = (founderId) => {
+        const data = foundersData[founderId];
+        if (!data) return;
+        let html = '';
+        if (founderId === 'about-ucha') {
+          html = `<h2>${data.title}</h2>${data.content}`;
+        } else {
+          html = `<h2>${data.name}</h2>`;
+          if (data.image) html += `<img src="${data.image}" alt="${data.name}" class="founder-image">`;
+          if (data.affiliation) html += `<p><strong>隸屬：</strong>${data.affiliation}</p>`;
+          if (data.dedication) html += `<p>${data.dedication}</p>`;
+        }
+        mainContentDiv.innerHTML = html;
+      };
 
-    <footer>
-      <p>© 2025 NFTsVERSE ART 與 宇宙數位文化典藏協會 (UCHA)。保留所有權利。</p>
-    </footer>
+      navigation.addEventListener('click', (e) => {
+        const link = e.target.closest('.founder-link');
+        if (!link) return;
+        e.preventDefault();
+        const id = link.dataset.founderId;
+        founderLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        loadContent(id);
+      });
 
-    <script>
-        // JavaScript (腳本)
-        document.addEventListener('DOMContentLoaded', () => {
-            // 注意：圖片與影片路徑需替換為您實際儲存的檔案路徑。
-            // 例如：'images/jerry_lee.jpg' 或 'videos/Declaration.mp4'
-            const foundersData = {
-                "about-ucha": {
-                    title: "宇宙數位文化典藏協會 (UCHA)",
-                    content: `
-                         <h3>同心同行，放眼宇宙——讓不可能成為可能</h3>
-                <p><strong>作者｜李俊煌（Jerry Lee）｜NFTsVERSE ART 創辦人、UCHA首任理事長</strong></p>
-                <p>許多人或會質疑：我們的願景宛如天方夜譚。</p>
-                <p>把《愛拚才會贏NFT》送上火星？還要在此之前，巡迴全球展覽？</p>
-                <p>匯聚全世界對「宇宙文化藝術遷徙」的認同與支持？這可能嗎？</p>
-                <p>然而，正是這份看似不可能的雄心，凝聚了我們九位創始人——</p>
-                <p>林志贏（JamesLin）、劉志勝（VicLiu）、羅濟森（MichaelLuo）、甘詔允（LancelotKhan）、</p>
-                <p>天爵（TainJue）、陳安邦（ChenAnPang）、陳惠湘（DianaChen）、楊姐（Candy），與我<br>李俊煌（JerryLee）——共同的信念與力量。</p>
-                <p>我們組成了UCHA（宇宙數位文化典藏協會），作為一個民間公益組織，將以Web3區塊鏈為橋，詳實記錄並永久上鏈：</p>
-                <p>《愛拚才會贏NFT》2022年1月，全球首次上鏈發表會所創下的歷史性成功。</p>
-                <p>這不是幻想，這是從想像走向實現的關鍵起點。這是台灣文化科技，首次在世界舞台上大聲說話。</p>
-                <p>接下來，NFTsVERSE ART 團隊將特別鑄造<br>「火星遷徙版《愛拚才會贏NFT》」，</p>
-                <p>並授權協會正式捐贈予太空任務執行單位，作為人類文化記憶的一部分。</p>
-                <p>在發射前夕，我們將舉辦系列全球公益展覽，串聯藝術與科技、島嶼與星球，並發行文化衍生周邊，</p>
-                <p>用具體行動向全世界宣告：<br>文化無界、藝術無疆！</p>
-                <p>這不只是展示——這是一次跨越大氣層、挑戰時間與空間的壯闊旅程。</p>
-                <p>正如 Elon Musk 所言：<br>「火星，是新天地的領土。」</p>
-                <p>我們以此宣言，作為勇氣的注腳。</p>
-                <p>因為我們堅信——這首被全球逾15億人次傳唱的台語金曲，<br>《愛拚才會贏》，所承載的不屈不撓與奮鬥精神，<br>必能跨越語言、文化與星際的隔閡！</p>
-                <p>它不是高不可攀的藝術品。它來自庶民，卻撼動了全球。</p>
-                <p>這首俗中之王，用最接地氣的旋律，影響了領袖，也感動了百姓。</p>
-                <p>迄今，已被翻唱超過40個國家、15種語言版本，它的傳播力，就是我們的根基。</p>
-                <p>未來，我們九位創始人，將共同肩負這項使命。</p>
-                <p>請各位發起人，繼續代表協會在國際舞台與星際文化交流中發聲，</p>
-                <p>讓來自台灣的創作藝術與公益精神，透過Web3技術化為永恆的文化豐碑，</p>
-                <p>陪伴人類，共同邁向那無垠宇宙。</p>
-                <p>你若願拚，我們陪你拚到宇宙盡頭。</p>
-                            <div id="declaration-video">
-                            <h3>協會宣言影片</h3>
-<iframe src="https://www.youtube.com/embed/h-y1uuEqEzw" title="UCHA 宣言影片" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-
-                            <video controls poster="images/declaration-poster.jpg">
-                                <source src="videos/Declaration.mp4" type="video/mp4">
-                                您的瀏覽器不支援影片播放。
-                            </video>
-                        </div>
-                    `
-                },
-                "jerry-lee": {
-                    name: "李俊煌 (Jerry Lee)",
-                    image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/jerry-lee.webp",
-                    affiliation: "BRAND TAIWAN INTERNATIONAL LTD, NFTsVERSE ART 創辦人",
-                    dedication: ""
-                },
-                "tain-jue": {
-                    name: "陳景程 (Tain Jue)",
-                    image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/tain-jue.webp",
-                    dedication: "天爵兄弟，三年前初識至今，您與我並肩砥礪，見證彼此的成長與
-突破。您在品牌行銷與跨界策展的深厚造詣，多次為「傳世國寶系列NFT」注入卓越能量。如
-今有您作為發起人之一，擔當人類面向宇宙的文化大使，實為協會之幸。
-"
-                },
-                "lancelot-khan": {
-                    name: "甘詔允 (Lancelot Khan)",
-                    image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/lancelot-khan.webp",
-                    dedication: "詔允兄，相識逾三載，您以國際視野與創新思維為團隊帶來無
-價助力。對品牌與文化的敏銳洞察，啟發我們向更寬廣的星際文化交流邁進。未來，期待您的遠
-見繼續引領UCHA拓展疆界。"
-                },
-                "chen-anpang": {
-                    name: "陳安邦 (Chen Anpang)",
-                    image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/chen-anpang.webp",
-                    dedication: " 邦哥，二年多來共事結緣，您在企業經營與社會責任方面的卓
-越表現，為協會打造了穩固的人資與安全維護基礎。未來，請您持續以務實果敢的態度，為國際
-推廣展覽與跨星宣導保駕護航。
-"
-                },
-                "james-lin": {
-                    name: "林志贏 (James Lin)",
-                    image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/james-lin.webp",
-                    dedication: "志贏兄弟，雖僅相識十餘年，您在連鎖產業新媒體與影音策展領
-域展現的創意能量，為我們的宣傳注入無限活力。盼未來您以創新手法，讓華人文化在Web3宇
-宙中綻放更加耀眼的光芒。"
-                },
-                "diana-chen": {
-                    name: "陳惠湘 (Diana Chen)",
-                    image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/diana-chen.webp",
-                    dedication: " 惠湘姐，七年來您在公關與媒體操作上的精准手腕，為專案爭取
-了關鍵曝光。對「愛拚才會贏NFT」的鼎力支持與資源連結，印證了您以溫暖與專業串聯各界
-的力量。今天，請您化身我們的「宇宙文化大使」，在國際舞台與媒體前，持續弘揚華人文藝精
-神。
-"
-                },
-                "candy": {
-                    name: "楊姊 (Candy)",
-                    image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/candy.webp",
-                    dedication: "楊姊三年前透過江哥認識結下善緣，您在社會關懷與公益領域的熱忱付出，
-為UCHA與全球受眾搭建起關愛的橋樑。期盼您以愛心與影響力，將協會理念廣布世界每個角
-落。"
-                },
-                "michael-luo": {
-                    name: "羅濟森 (Michael Luo)",
-                    image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/michael-luo.webp",
-                    dedication: "阿森老師，五年多來，您在科技與藝術跨界研發的前瞻見解，為
-「KANDER’SCHINAROYALART國寶NFT」注入創新生命。未來，還請您將此洞察帶入協會
-制度設計與跨星應用，讓文化作品在元資料中綻放萬丈光芒。"
-                },
-                "vic-liu": {
-                    name: "劉志勝 (Vic Liu)",
-                    image: "https://raw.githubusercontent.com/jerrylee0217520/foundersData/refs/heads/main/docs/vic-liu.webp",
-                    dedication: "寶哥，認識逾三十載，您在品牌行銷與公關議題操作方面的專業，為
-「愛拚才會贏NFT」發表會提供了堅實支點。在打造「永恆宇宙文化典藏」的路上，期待您以
-深厚見解，助UCHA穩健成長，邁向國際與星際的新篇章。"
-                }
-            };
-
-            const mainContentDiv = document.getElementById('main-content');
-            const navigation = document.getElementById('founder-nav');
-            const founderLinks = navigation.querySelectorAll('.founder-link');
-
-            const loadContent = (founderId) => {
-                const data = foundersData[founderId];
-                if (!data) return; // 如果找不到資料，則不執行
-
-                let htmlContent = '';
-
-                if (founderId === "about-ucha") {
-                    htmlContent = `
-                        <h2>${data.title}</h2>
-                        ${data.content}
-                    `;
-                } else {
-                    htmlContent = `
-                        <h2>${data.name}</h2>
-                        ${data.image ? `<img src="${data.image}" alt="照片：${data.name}" class="founder-image">` : ''}
-                        ${data.affiliation ? `<p><strong>隸屬：</strong>${data.affiliation}</p>` : ''}
-                        ${data.dedication ? `<p>${data.dedication}</p>` : ''}
-                    `;
-                }
-                mainContentDiv.innerHTML = htmlContent;
-            };
-            
-            // 使用事件委派 (Event Delegation) 提升效率
-            navigation.addEventListener('click', (event) => {
-                const link = event.target.closest('.founder-link'); // 點擊的元素或其父層是否為 .founder-link
-                if (link) {
-                    event.preventDefault(); // 防止頁面跳轉
-                    const founderId = link.dataset.founderId;
-
-                    // 更新按鈕的 active 狀態
-                    founderLinks.forEach(l => l.classList.remove('active'));
-                    link.classList.add('active');
-                    
-                    loadContent(founderId);
-                }
-            });
-
-            // 初始載入 '關於 UCHA' 的內容
-            loadContent('about-ucha');
-        });
-    </script>
+      // 初始化
+      loadContent('about-ucha');
+    });
+  </script>
 </body>
 </html>
